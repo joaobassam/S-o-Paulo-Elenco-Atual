@@ -231,7 +231,10 @@ def main():
         ranking_full = build_ranking_df(games, players, comp)
 
         # Montar lista de jogadores com ID para selectbox
-        players_sorted = players_filtered.sort_values("Jogador")
+        # Obs.: a variável `players_filtered` não existia e causava NameError.
+        # Aqui usamos o DF completo de jogadores. Se quiser filtrar (por ano/status),
+        # crie um `players_filtered = players[...]` antes desta linha.
+        players_sorted = players.sort_values("Jogador")
 
         options = {
             f"{row['Jogador']} ({row['ID']})": row["ID"]
@@ -473,7 +476,7 @@ def main():
                 st.download_button(
                     label="⬇️ Baixar CSV de Jogos atualizado",
                     data=csv_games,
-                    file_name="São Paulo_Elenco Atual - Jogos_atualizado.csv",
+                    file_name="São Paulo_Base - Jogos_atualizado.csv",
                     mime="text/csv",
                 )
 
@@ -481,7 +484,7 @@ def main():
                 st.download_button(
                     label="⬇️ Baixar CSV de CadastroJogadores atualizado",
                     data=csv_players,
-                    file_name="São Paulo_Elenco Atual - CadastroJogadores_atualizado.csv",
+                    file_name="São Paulo_Base - CadastroJogadores_atualizado.csv",
                     mime="text/csv",
                 )
 
@@ -579,7 +582,7 @@ def main():
             st.download_button(
                 label="⬇️ Baixar CSV de Competições atualizado",
                 data=csv_comp,
-                file_name="São Paulo_Elenco Atual - Competições.csv",
+                file_name="São Paulo_Base - Competições_atualizado.csv",
                 mime="text/csv",
             )
 

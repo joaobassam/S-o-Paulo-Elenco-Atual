@@ -473,7 +473,7 @@ def main():
                 st.download_button(
                     label="⬇️ Baixar CSV de Jogos atualizado",
                     data=csv_games,
-                    file_name="São Paulo_Base - Jogos_atualizado.csv",
+                    file_name="São Paulo_Elenco Atual - Jogos_atualizado.csv",
                     mime="text/csv",
                 )
 
@@ -481,7 +481,7 @@ def main():
                 st.download_button(
                     label="⬇️ Baixar CSV de CadastroJogadores atualizado",
                     data=csv_players,
-                    file_name="São Paulo_Base - CadastroJogadores_atualizado.csv",
+                    file_name="São Paulo_Elenco Atual - CadastroJogadores_atualizado.csv",
                     mime="text/csv",
                 )
 
@@ -579,7 +579,7 @@ def main():
             st.download_button(
                 label="⬇️ Baixar CSV de Competições atualizado",
                 data=csv_comp,
-                file_name="São Paulo_Base - Competições_atualizado.csv",
+                file_name="São Paulo_Elenco Atual - Competições.csv",
                 mime="text/csv",
             )
 
